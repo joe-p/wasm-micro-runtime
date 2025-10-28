@@ -3184,7 +3184,7 @@ aot_create_comp_context(const AOTCompData *comp_data, aot_comp_option_t option)
             comp_ctx->stack_usage_file = option->stack_usage_file;
         }
 
-        // TODO: PR this
+        // TODO: PR a "silent" option
         // os_printf("Create AoT compiler with:\n");
         // os_printf("  target:        %s\n", comp_ctx->target_arch);
         // os_printf("  target cpu:    %s\n", cpu);
@@ -3192,20 +3192,20 @@ aot_create_comp_context(const AOTCompData *comp_data, aot_comp_option_t option)
         // os_printf("  cpu features:  %s\n", features);
         // os_printf("  opt level:     %d\n", opt_level);
         // os_printf("  size level:    %d\n", size_level);
-        switch (option->output_format) {
-            case AOT_LLVMIR_UNOPT_FILE:
-                os_printf("  output format: unoptimized LLVM IR\n");
-                break;
-            case AOT_LLVMIR_OPT_FILE:
-                os_printf("  output format: optimized LLVM IR\n");
-                break;
-            case AOT_FORMAT_FILE:
-                os_printf("  output format: AoT file\n");
-                break;
-            case AOT_OBJECT_FILE:
-                os_printf("  output format: native object file\n");
-                break;
-        }
+        // switch (option->output_format) {
+        //     case AOT_LLVMIR_UNOPT_FILE:
+        //         os_printf("  output format: unoptimized LLVM IR\n");
+        //         break;
+        //     case AOT_LLVMIR_OPT_FILE:
+        //         os_printf("  output format: optimized LLVM IR\n");
+        //         break;
+        //     case AOT_FORMAT_FILE:
+        //         os_printf("  output format: AoT file\n");
+        //         break;
+        //     case AOT_OBJECT_FILE:
+        //         os_printf("  output format: native object file\n");
+        //         break;
+        // }
 
         LLVMSetTarget(comp_ctx->module, triple_norm);
 
