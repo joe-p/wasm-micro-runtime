@@ -3184,13 +3184,14 @@ aot_create_comp_context(const AOTCompData *comp_data, aot_comp_option_t option)
             comp_ctx->stack_usage_file = option->stack_usage_file;
         }
 
-        os_printf("Create AoT compiler with:\n");
-        os_printf("  target:        %s\n", comp_ctx->target_arch);
-        os_printf("  target cpu:    %s\n", cpu);
-        os_printf("  target triple: %s\n", triple_norm);
-        os_printf("  cpu features:  %s\n", features);
-        os_printf("  opt level:     %d\n", opt_level);
-        os_printf("  size level:    %d\n", size_level);
+        // TODO: PR this
+        // os_printf("Create AoT compiler with:\n");
+        // os_printf("  target:        %s\n", comp_ctx->target_arch);
+        // os_printf("  target cpu:    %s\n", cpu);
+        // os_printf("  target triple: %s\n", triple_norm);
+        // os_printf("  cpu features:  %s\n", features);
+        // os_printf("  opt level:     %d\n", opt_level);
+        // os_printf("  size level:    %d\n", size_level);
         switch (option->output_format) {
             case AOT_LLVMIR_UNOPT_FILE:
                 os_printf("  output format: unoptimized LLVM IR\n");
